@@ -1,0 +1,2 @@
+# electropystats
+Electrostatics using python : )
