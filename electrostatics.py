@@ -8,7 +8,7 @@ xa, ya = meshgrid(a, b)     # A meshgrid in the xy plane. xa contains the x-coor
 Ex = zeros_like(xa)         # 2D array to store the Ex and
 Ey = zeros_like(ya)         # Ey components
 
-Q = [(109, 1, 0), (-10, -1, 0), (1, 0, 1)]  # Charges (Value, x-cord, y-cord)
+Q = [(10, 1, 0), (-10, -1, 0), (10, 1, 1), (-10, -1, -1), (10, 1, -1), (-10, -1, 1)]  # Charges (Value, x-cord, y-cord)
 
 for q in Q:  # mark charge locations
     if q[0]>0:
@@ -28,6 +28,6 @@ sumQ = 0
 for k in range(len(Q)): # sum over the charges 
     sumQ += abs(Q[k][0])
 
-sumQ = math.log(3+sumQ/2, 3)-0.82
+sumQ = math.log(3+sumQ/2, 3)-0.8162
 streamplot(xa, ya, Ex, Ey, color='b', density=sumQ ) #plot the field lines using streamplot
 show() # show the plot
